@@ -84,12 +84,12 @@ const CampaignForm = ({ onStart }) => {
 
   return (
     <div className="max-w-3xl mx-auto">
-      <div className="bg-white rounded-2xl shadow-xl p-8">
+      <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl p-8">
         <div className="text-center mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
             Create Your Marketing Campaign
           </h2>
-          <p className="text-gray-600">
+          <p className="text-gray-600 dark:text-gray-300">
             Our AI agents will research, strategize, write, and design your complete campaign
           </p>
         </div>
@@ -97,7 +97,7 @@ const CampaignForm = ({ onStart }) => {
         <form onSubmit={handleSubmit} className="space-y-6">
           {/* Product Name */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
               Product/Service Name *
             </label>
             <input
@@ -105,14 +105,14 @@ const CampaignForm = ({ onStart }) => {
               required
               value={formData.product_name}
               onChange={(e) => handleChange('product_name', e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="e.g., TaskMaster Pro"
             />
           </div>
 
           {/* Industry */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
               Industry *
             </label>
             <input
@@ -120,14 +120,14 @@ const CampaignForm = ({ onStart }) => {
               required
               value={formData.industry}
               onChange={(e) => handleChange('industry', e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="e.g., SaaS, E-commerce, Healthcare"
             />
           </div>
 
           {/* Target Audience */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
               Target Audience *
             </label>
             <textarea
@@ -135,20 +135,20 @@ const CampaignForm = ({ onStart }) => {
               value={formData.target_audience}
               onChange={(e) => handleChange('target_audience', e.target.value)}
               rows={3}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="e.g., Small business owners and entrepreneurs aged 25-45 who need better project management tools"
             />
           </div>
 
           {/* Tone */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
               Content Tone
             </label>
             <select
               value={formData.tone}
               onChange={(e) => handleChange('tone', e.target.value)}
-              className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             >
               <option value="professional">Professional</option>
               <option value="casual">Casual</option>
@@ -160,7 +160,7 @@ const CampaignForm = ({ onStart }) => {
 
           {/* Key Features */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
               Key Features/Benefits
             </label>
             {formData.key_features.map((feature, index) => (
@@ -195,7 +195,7 @@ const CampaignForm = ({ onStart }) => {
 
           {/* Campaign Goals */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
               Campaign Goals
             </label>
             {formData.campaign_goals.map((goal, index) => (
@@ -230,7 +230,7 @@ const CampaignForm = ({ onStart }) => {
 
           {/* Platforms */}
           <div>
-            <label className="block text-sm font-medium text-gray-700 mb-2">
+            <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
               Target Platforms
             </label>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
